@@ -11,7 +11,7 @@ markdownSlides:
     - echo "done"
   only:
     refs:
-      - master
+      - main
     changes:
       - slides/*
 
