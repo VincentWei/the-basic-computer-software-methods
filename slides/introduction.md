@@ -57,5 +57,23 @@
 * 操作系统
 
 		
+## 9. 本课程内容
+
+* 信息的计算机表述
+* 信息的计算机存储
+* 信息的计算机处理
+* 信息的计算机展现
+* 信息的计算机传输
+* 计算机编程语言
+* 操作系统
+* 软件工程方法
+* 前沿热点
+
+## 10. 教材开源，协作撰写
+
+- [GitLab 仓库][https://gitlab.fmsoft.cn/VincentWei/the-basic-computer-software-methods]
+- [GitHub 仓库][https://github.com/VincentWei/the-basic-computer-software-methods]
+
+		
 ## Q & A
 
