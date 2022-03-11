@@ -3,15 +3,15 @@ markdownSlides:
   stage: deploy
   script:
     - echo "copy images..."
-    - cp docs/*.png docs/*.jpg /var/www/courses.fmsoft.cn/the-basic-computer-software-methods/assets -f
+    - cp slides/*.png slides/*.jpg /var/www/courses.fmsoft.cn/the-basic-computer-software-methods/assets -f
     - echo "copy HTML files..."
-    - cp docs/*.html /var/www/courses.fmsoft.cn/the-basic-computer-software-methods/ -f
+    - cp slides/*.html /var/www/courses.fmsoft.cn/the-basic-computer-software-methods/ -f
     - echo "copy markdown files..."
-    - cp docs/*.md /var/www/courses.fmsoft.cn/the-basic-computer-software-methods/gitlab/ -f
+    - cp slides/*.md /var/www/courses.fmsoft.cn/the-basic-computer-software-methods/gitlab/ -f
     - echo "done"
   only:
     refs:
       - master
     changes:
-      - docs/*
+      - slides/*
 
