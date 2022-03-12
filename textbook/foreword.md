@@ -149,15 +149,9 @@
 为描述方便，我们将本书使用的伪代码语言称为 [P 语言][6]。以下通过示例简要描述该语言特性，更详细的描述请参阅本书附录A。
 作为示例，我们给出一段输出[斐波那契][7]数列的 P 语言程序。在数学上，斐波那契数列就是 0, 1, 1, 2, 3, 5, 8 这种形式的数列，其规律是从第三个数开始，后面的数是前两个数的和。我们可以使用递归函数定义这个数列：
 
-<img src="https://render.githubusercontent.com/render/math?math=F_0 = 0#gh-light-mode-only" />  
-<img src="https://render.githubusercontent.com/render/math?math=F_1 = 1" />  
-<img src="https://render.githubusercontent.com/render/math?math=F_n = F_{n-1} + F_{n-2}\ (n\ge2)" />  
-
-<img src="https://render.githubusercontent.com/render/math?math=\color{gray}F_0 = 0#gh-dark-mode-only" />  
-<img src="https://render.githubusercontent.com/render/math?math=\color{gray}F_1 = 1" />  
-<img src="https://render.githubusercontent.com/render/math?math=\color{gray}F_n = F_{n-1} + F_{n-2}\ (n\ge2)" />  
-
-
+<img src="https://render.githubusercontent.com/render/math?math=\color{gray}F_0 = 0" /><br/>
+<img src="https://render.githubusercontent.com/render/math?math=\color{gray}F_1 = 1" /><br/>
+<img src="https://render.githubusercontent.com/render/math?math=\color{gray}F_n = F_{n-1} + F_{n-2}\ (n\ge2)" /><br/>
 
 使用上述递归函数，我们输出斐波那契数列的 P 语言程序如下所示：
 
