@@ -310,7 +310,7 @@ C:\>RENAME C:\Windows\Temp\ABitMap.ini abitmap.ini
 上面的内容来自 `cp` 命令的手册页（man page）。该手册页解释了 `cp` 命令的用途及详细用法，在 `SYNOPSIS`（原语）一节中给出了 `cp` 命令的三种形式（使用 `cp --help` 命令也可以获得类似的信息）。和 DOS 的帮助信息类似，Linux 的手册页也使用了中括号表示命令行中的可选部分，另外还使用了冒号表示命令行中特定的部分可以有多个，比如选项可以有多个，源文件可以有多个。下面这些 `cp` 命令的用法是正确的：
 
 ```bash
-$ cp –t d a b c
+$ cp -t d a b c
 $ cp a b c d/
 ```
 
