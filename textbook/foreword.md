@@ -1,14 +1,11 @@
-# 引言
-
 @SUBJECT [计算机软件技术导论](toc.md)  
 @AUTHOR [魏永明](https://github.com/VincentWei)  
 @DATE 2015-xx-xx  
 @LANG 简体中文  
+@COPYING 版权所有 &copy; 2022 魏永明  
+@LICENSE 保留所有权利  
 
-*版权声明*
-
-版权所有 &copy; 2022 魏永明  
-保留所有权利
+# 引言
 
 ## 初衷和目标
 
