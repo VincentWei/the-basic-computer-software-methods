@@ -1,8 +1,6 @@
 ## 前言
 
-- 时间：2022 年 3 月 13 日 18:00 ~ 19:00
-- 地点：微信视频号“考鼎录”直播间
-- [预约或回放](#/grand-finale)
+为什么要开设《计算机软件方法导论》公益课程？
 
 		
 ## 1. 全民编程时代即将来临
@@ -69,11 +67,9 @@
 * 软件工程方法
 * 前沿热点
 
+		
 ## 10. 教材开源，协作撰写
 
-- [GitLab 仓库][https://gitlab.fmsoft.cn/VincentWei/the-basic-computer-software-methods]
 - [GitHub 仓库][https://github.com/VincentWei/the-basic-computer-software-methods]
-
-		
-## Q & A
+- [GitLab 仓库][https://gitlab.fmsoft.cn/VincentWei/the-basic-computer-software-methods]
 
