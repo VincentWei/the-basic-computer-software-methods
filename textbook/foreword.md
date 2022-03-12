@@ -2,7 +2,7 @@
 
 @SUBJECT [计算机软件技术导论](toc.md)  
 @AUTHOR [魏永明](https://github.com/VincentWei)  
-@DATE 2015-某月-某日  
+@DATE 2015-xx-xx  
 @LANG 简体中文  
 
 *版权声明*
