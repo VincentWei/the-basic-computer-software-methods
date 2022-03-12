@@ -162,7 +162,7 @@
 <div align="center">
   <img src="https://render.githubusercontent.com/render/math?math=\color{gray}F_0 = 0" /><br/>
   <img src="https://render.githubusercontent.com/render/math?math=\color{gray}F_1 = 1" /><br/>
-  <img src="https://render.githubusercontent.com/render/math?math=\color{gray}F_n = F_{n-1} %2B F_{n-2} \text(n\ge2)" /><br/>
+  <img src="https://render.githubusercontent.com/render/math?math=\color{gray}F_n = F_{n-1} %2B F_{n-2} \text{%20%20%20%20(n\ge2)}" /><br/>
 </div>
 
 使用上述递归函数，我们输出斐波那契数列的 P 语言程序如下所示：
