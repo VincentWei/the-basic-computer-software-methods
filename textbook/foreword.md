@@ -237,7 +237,7 @@ int main (void)
 除了递归方法依次产生斐波那契数列之外，我们还可以通过如下[数学公式][8]计算给定位置的值：
 
 <div align="center">
-  <img src="https://render.githubusercontent.com/render/math?math=\color{gray}F_n=\frac1\sqrt5[({\frac{1 %2B \sqrt5}2})^n - ({\frac{1 - \sqrt5}2})^n]" /><br/>
+  <img src="https://render.githubusercontent.com/render/math?math=\color{fuchsia}F_n=\frac1\sqrt5[({\frac{1 %2B \sqrt5}2})^n - ({\frac{1 - \sqrt5}2})^n]" /><br/>
 </div>
 
 相应 P 语言程序如下：
