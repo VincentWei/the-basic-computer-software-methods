@@ -195,8 +195,9 @@ static Achar32 utf16le_get_char_value (const unsigned char* mchar, int len)
 
 * C 语言中的宽字符 `wchar_t`，不同平台宽度不一。
 * Java 语言中的 16 位宽的字符。
-* Python 2.0 对字符串不区分编码，使用 `#coding:xxx` 告知解释器当前默认编码。
-* Python 3.0 中字符串使用 UTF-16 编码，其他编码的字符串使用字节序列。
+* Python 2.0 对字符串不区分编码。
+* Python 3.0 中字符串内部使用 UTF-16 编码，其他编码的字符串使用字节序列表达。
+* Python 使用 `#coding:xxx` 告知解释器当前默认编码。
 
 		
 ## 17. 字符集/编码的转换（C）
@@ -238,6 +239,7 @@ static UChar32 gb2312_0_conv_to_uc32 (AChar32 achar32)
 * encode()：将 Unicode 字符串编码为指定字符集/编码。
 * decode()：将指定字符集编码字节序列编码为 Unicode 字符串。
 
+	
 ```python
 # coding: utf-8
 
@@ -257,6 +259,7 @@ byets_gbk.decode("utf8")                // 异常
 * 其他所有字符集/编码统一使用字节序列类型处理。
 * 提供类似 Python 3 的 decode 和 encode 方法。
 
+	
 ```js
 $EJSON.fetchstr(bxFFFE000048000000560000004D0000004C0000002F6600006851000003740000969900002A4E0000EF530000167F00000B7A000007680000B08B0000ED8B0000008A000001FF0000", "utf32")
     // string: "HVML是全球首个可编程标记语言！"
@@ -277,6 +280,8 @@ $EJSON.unpack("i16le i32le", bx0a000a000000)
 - Base64：只使用有限的 ASCII 字符表示二进制数据（三个字节扩展为四个字节表示）
 - URL 编码： 对 `-_.` 之外的所有非字母数字字符都将被替换成百分号（%）后跟两位十六进制数，空格编码为加号（+）
 - URL 裸编码：对 `-_.` 之外的所有非字母数字字符都将被替换成百分号（%）后跟两位十六进制数
+
+	
 
 ```js
 $EJSON.unpack("utf8", $EJSON.base64_decode('SFZNTCDmmK/lhajnkIPpppbmrL7lj6/nvJbnqIvmoIforrDor63oqIA='))
