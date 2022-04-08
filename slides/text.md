@@ -4,6 +4,8 @@
 - 各种字符集及编码的混战
 - Unicode 的胜利
 - Unicode 字符集及其编码
+- 字符集/编码转换
+- 其他编码形式
 
 		
 ## 1. 对文字进行编码的需求
@@ -78,7 +80,7 @@
    - ASCII 兼容
 
 		
-## 10. Unicode 码点用 UTF-16LE 编码表示
+## 10. 码点转 UTF-16LE 编码
 
 ```c
 static int utf16le_conv_from_uc32 (Uchar32 wc, unsigned char* mchar)
@@ -113,7 +115,7 @@ static int utf16le_conv_from_uc32 (Uchar32 wc, unsigned char* mchar)
 注：代码选自 [MiniGUI](https://github.com/VincentWei/minigui)
 
 		
-## 11. UTF-16LE 编码转 Unicode 码点
+## 11. UTF-16LE 编码转码点
 
 ```c
 static Achar32 utf16le_get_char_value (const unsigned char* mchar, int len)
@@ -140,7 +142,7 @@ static Achar32 utf16le_get_char_value (const unsigned char* mchar, int len)
 注：代码选自 [MiniGUI](https://github.com/VincentWei/minigui)
 
 		
-## 12. 为什么 UTF-8 编码获得统治地位？
+## 12. 为什么 UTF-8 编码获胜
 
 * Unix、C 语言作者之一肯·汤普逊提出。
 
