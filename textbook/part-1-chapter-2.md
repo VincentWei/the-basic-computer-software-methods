@@ -34,7 +34,8 @@
 
 下图给出了一个典型字节的比特位组成：
 
-<div align="center";font-size:"small">
+<div align="center">
+  ![一个典型的字节](illustration/img-2-1.png)<br>
   图 2-1 一个典型的字节
 </div>
 <br>
@@ -56,15 +57,15 @@
 
 <div align="center">
   ![小头存储](illustration/img-2-2.png)<br>
-  <small> 图 2-2 小头（little-endian）存储</small><br>
+  图 2-2 小头（little-endian）存储
 </div>
 <br>
 
 大头系统存储多字节数据对象时，采用和小头系统完全相反的方式，见图 2-3。
 
 <div align="center">
-  ![大头存储](illustration/img-2-3.png)</center><br>
-  <small>图 2-3 大头（big-endian）存储</small><br>
+  ![大头存储](illustration/img-2-3.png)<br>
+  图 2-3 大头（big-endian）存储
 </div>
 <br>
 
@@ -74,8 +75,8 @@
 除了常见的小头存储和大头存储方式之外，还有一种 32 位整数的存储方式，即 PDP ENDIAN。PDP ENDIAN 很少使用，它在存储 32 位整数时，用来形成 32 位整数的两个 16 位整数采用大头存储形式，而形成 16 位整数的两个 8 位字节却采用小头存储形式>。图 2-4 给出了这三种 ENDIAN 系统存储 0x04030201 这个 32 整数时的字节顺序。
 
 <div align="center">
-  ![存储顺序](illustration/img-2-4.png)</center><br>
-  <small>图 2-4 Little-endian、Big-endian 以及 PDP-endian 对 32 位整数的存储顺序</center><br>
+  ![存储顺序](illustration/img-2-4.png)<br>
+  图 2-4 Little-endian、Big-endian 以及 PDP-endian 对 32 位整数的存储顺序<br>
 </div>  
 <br>
 
@@ -303,7 +304,7 @@ The size of my_struct is 8
 
 <div align="center">
   ![my_struct 结构数组的内存布局](illustration/img-2-5.png)<br>
-  <small>图 2-5 my_struct 结构数组的内存布局</small><br>
+  图 2-5 my_struct 结构数组的内存布局
 </div>
 <br>
 
