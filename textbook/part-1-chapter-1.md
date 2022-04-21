@@ -72,6 +72,7 @@
 
 <img src="https://latex.codecogs.com/svg.image?\inline&space;C=x\cdot&space;y&plus;(x\bigoplus&space;y)\cdot&space;z" />  
   
+<br>
 
 其中，<img src="https://latex.codecogs.com/svg.image?\inline&space;\bigoplus" /> 表示“异或”运算（见第二章）；`·` 表示“与”运算；`+` 表示“或”运算。这样，二进制的加法器可以通过一系列二进制的逻辑运算来得出结果。而在物理上，类似三体人的人肉计算机那样，我们可以组合两个“异或门”、两个“与门”、一个“或门”来构造一个二进制的加法器。若要同时计算多位的二进制数，复制加法器并将它们连接起来就可以了。  
 
