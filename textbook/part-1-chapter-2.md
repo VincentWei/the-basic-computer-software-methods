@@ -53,14 +53,14 @@
 
 我们知道，桌面系统通常运行在英特尔的 x86 架构处理器上，而这种处理器按照低地址存放低位数据的原则保存多字节数据对象>。假定整数 0x1234 是一个 16 位整数，则在 Intel x86 平台上，处理器将按图 2-2 所示的方式存储这个整数。即低地址A中保>存 0x34 这个字节，而在高地址 A+1 中，保存 0x12 这个字节。这种字节序称为“小头（little-endian）”。见图2-2。
 
-<center>![小头存储](img-folder/img-2-2.png)</center>
+<center>![小头存储](illustration/img-2-2.png)</center>
 
 <center><small>图 2-2 小头（little-endian）存储</small></center>
 <br>
 
 大头系统存储多字节数据对象时，采用和小头系统完全相反的方式，见图 2-3。
 
-<center>![大头存储](img-folder/img-2-3.png)</center>
+<center>![大头存储](illustration/img-2-3.png)</center>
 
 <center><small>图 2-3 大头（big-endian）存储</small></center>
 <br>
@@ -70,7 +70,7 @@
 
 除了常见的小头存储和大头存储方式之外，还有一种 32 位整数的存储方式，即 PDP ENDIAN。PDP ENDIAN 很少使用，它在存储 32 位整数时，用来形成 32 位整数的两个 16 位整数采用大头存储形式，而形成 16 位整数的两个 8 位字节却采用小头存储形式>。图 2-4 给出了这三种 ENDIAN 系统存储 0x04030201 这个 32 整数时的字节顺序。
 
-<center>![存储顺序](img-folder/img-2-4.png)</center>
+<center>![存储顺序](illustration/img-2-4.png)</center>
 
 <center><small>图 2-4 Little-endian、Big-endian 以及 PDP-endian 对 32 位整数的存储顺序</small></center>
 
@@ -300,7 +300,7 @@ The size of my_struct is 8
 
 许多人会对此结果有疑问，然而，如果我们不作任何的特殊设置，这个结构的大小的确是 8。为什么会这样呢？这是因为，在 32 位处理器上，在存放多字节操作数时，编译器会根据操作数的大小确保在内存空间中该操作数对齐于地址边界。比如在上面这个结构中，char c 成员是个单字节的成员，这个成员可被保存在任意的地址；而 int i 成员的大小是 4 字节，编译器就会确保将 i 保存在地址为 4 的倍数的位置上。因此，上述结构在内存中存储时，它的实际内存布局不是我们想象的 c 占用一个字节，然后立即是 4 个字节的 i，而是像图 2-5 那样。  
 
-![my_struct 结构数组的内存布局](img-folder/img-2-3.png)  
+<center>![my_struct 结构数组的内存布局](illustration/img-2-3.png)</center> 
 
 <center><small>图 2-5 my_struct 结构数组的内存布局</small></center>  
 
