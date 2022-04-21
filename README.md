@@ -31,7 +31,7 @@
    - 相关教材：[文字：字符集及编码](textbook/part-1-chapter-4.md)  
 
 - 第五讲于 2022 年 4 月 13 日发表。
-   - [B 站视频]()
+   - [B 站视频](https://www.bilibili.com/video/BV1cY4y1Y7c1/)
    - [在线讲义](https://courses.fmsoft.cn/the-basic-computer-software-methods/text.html#/10) 
    - 相关教材：[文字：字符集及编码](textbook/part-1-chapter-4.md)  
 
