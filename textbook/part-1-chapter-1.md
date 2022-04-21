@@ -50,7 +50,7 @@
 
 表 1-1[^8] 给出了二进制表述情形下，不同输入（x 和y 为加数，z 为低位运算结果的进位值）情况下的输出（S 为和，C 为进位值）：  
 
-<center><small>表 1-1 二进制全加法器的真值表</small></center>  
+<small>表 1-1 二进制全加法器的真值表</small>   
 
 | x         | y         | z         | C         | S         |
 |:----------|:----------|:----------|:----------|:----------|
@@ -67,11 +67,8 @@
 根据布尔代数的运算规则，我们会发现：  
 
 <div align="center">
-
-<img src="https://latex.codecogs.com/svg.image?\inline&space;S=x\oplus&space;y\oplus&space;z" /><br>
-
-<img src="https://latex.codecogs.com/svg.image?\inline&space;C=x\cdot&space;y&plus;(x\bigoplus&space;y)\cdot&space;z" /><br>
-
+  <img src="https://latex.codecogs.com/svg.image?\inline&space;S=x\oplus&space;y\oplus&space;z" /><br>
+  <img src="https://latex.codecogs.com/svg.image?\inline&space;C=x\cdot&space;y&plus;(x\bigoplus&space;y)\cdot&space;z" /><br>
 </div>  
 
 其中，<img src="https://latex.codecogs.com/svg.image?\inline&space;\bigoplus" /> 表示“异或”运算（见第二章）；`·` 表示“与”运算；`+` 表示“或”运算。这样，二进制的加法器可以通过一系列二进制的逻辑运算来得出结果。而在物理上，类似三体人的人肉计算机那样，我们可以组合两个“异或门”、两个“与门”、一个“或门”来构造一个二进制的加法器。若要同时计算多位的二进制数，复制加法器并将它们连接起来就可以了。  
@@ -92,9 +89,11 @@
 
 1945 年 6 月，冯·诺伊曼[^9]与戈德斯坦、勃克斯等人，联名发表了一篇长达 101 页纸的报告，即计算机史上著名的“101 页报告”。这个报告是现代计算机科学发展的里程碑式文献。其中明确规定用二进制替代十进制运算，并将计算机分成五大组件（即算术逻辑单元、控制单元、存储器、输入和输出，见图 1-1）。这一卓越的思想为电子计算机的逻辑结构设计奠定了基础，已成为计算机设计的基本原则。由于冯·诺伊曼在计算机逻辑结构设计上的伟大贡献，他被誉为“计算机之父”。在冯·诺伊曼架构的指导下，EDVAC 计算机于 1951 年宣告完成。  
 
-<center>![冯·诺伊曼架构示意图](img-1-1.png)</center><br>  
-
-<center><small>图 1-1  冯·诺伊曼架构示意图</small></center><br>  
+<div align="center">
+  ![冯·诺伊曼架构示意图](img-1-1.png)<br>
+  图 1-1  冯·诺伊曼架构示意图
+</div>
+<br>  
 
 冯·诺伊曼架构的各部分功能如下：  
 
