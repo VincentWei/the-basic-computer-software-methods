@@ -34,8 +34,9 @@
 
 下图给出了一个典型字节的比特位组成：
 
-<center><small>图 2-1 一个典型的字节</small></center>
-
+<div align="center";font-size:"small">
+  图 2-1 一个典型的字节
+</div>
 <br>
 
 注意其排列顺序，最左侧的位称为“最高位（most significant bit，MSB）”，最右侧的位称为“最低位（least significant bit>，LSB）”。这一排列顺序和书写十进制数字时左侧表示高位、右侧表示低位是一样的。
@@ -57,15 +58,15 @@
   ![小头存储](illustration/img-2-2.png)<br>
   <small> 图 2-2 小头（little-endian）存储</small><br>
 </div>
-
 <br>
 
 大头系统存储多字节数据对象时，采用和小头系统完全相反的方式，见图 2-3。
 
 <div align="center">
   ![大头存储](illustration/img-2-3.png)</center><br>
-  <small>图 2-3 大头（big-endian）存储</small></center><br>
+  <small>图 2-3 大头（big-endian）存储</small><br>
 </div>
+<br>
 
 许多 RISC 处理器都使用大头字节序，比如 PowerPC、M68k等（ARM 和 MIPS 处理器可灵活设置采用哪种字节序，通常被设置为小
 头）。ARM 处理器还有一个特殊之处，即整数的表述通常被设置为小头系统，但始终使用大头字节序来存储浮点数。  
@@ -74,8 +75,9 @@
 
 <div align="center">
   ![存储顺序](illustration/img-2-4.png)</center><br>
-  <center><small>图 2-4 Little-endian、Big-endian 以及 PDP-endian 对 32 位整数的存储顺序</small></center><br>
+  <small>图 2-4 Little-endian、Big-endian 以及 PDP-endian 对 32 位整数的存储顺序</center><br>
 </div>  
+<br>
 
 通常在我们的程序开发过程中，不同的大小头并不会给我们带来大的麻烦。但是，假如我们将一个小头的二进制数保存在一个文件
 中，然后再在大头的系统上读取时，就可能出现问题。这是因为：
@@ -115,7 +117,7 @@ STDIO.fclose (my_file)
 
 在 C 语言中，我们如何判断程序运行在大头系统还是小头系统上呢？我们可以通过清单 2-1 中的 `is_big_endian` 函数来判断。  
 
-<center><small>清单 2-1  判断目标系统的字节序（check_endian.c）</small></center>
+<small>清单 2-1  判断目标系统的字节序（check_endian.c）</small>
 
 ```
 #include <stdio.h>
@@ -214,9 +216,7 @@ int main (void)
 
 清单 2-2 中的函数，给出了将内存中的大头或者小头整数转换为本机字节序的 C 语言例程（函数），可供读者参考或使用。  
 
-<center><small>清单 2-2 将大头整数或者小头整数转换为本机字节序（conv_int.c)</small></center>
-
-<br>  
+<small>清单 2-2 将大头整数或者小头整数转换为本机字节序（conv_int.c)</small>
 
 ```
 static inline unsigned short ReadLE16Mem (const unsigned char** data)
@@ -301,9 +301,11 @@ The size of my_struct is 8
 
 许多人会对此结果有疑问，然而，如果我们不作任何的特殊设置，这个结构的大小的确是 8。为什么会这样呢？这是因为，在 32 位处理器上，在存放多字节操作数时，编译器会根据操作数的大小确保在内存空间中该操作数对齐于地址边界。比如在上面这个结构中，char c 成员是个单字节的成员，这个成员可被保存在任意的地址；而 int i 成员的大小是 4 字节，编译器就会确保将 i 保存在地址为 4 的倍数的位置上。因此，上述结构在内存中存储时，它的实际内存布局不是我们想象的 c 占用一个字节，然后立即是 4 个字节的 i，而是像图 2-5 那样。  
 
-<center>![my_struct 结构数组的内存布局](illustration/img-2-5.png)</center><br>
-
-<center><small>图 2-5 my_struct 结构数组的内存布局</small></center><br>
+<div align="center">
+  ![my_struct 结构数组的内存布局](illustration/img-2-5.png)<br>
+  <small>图 2-5 my_struct 结构数组的内存布局</small><br>
+</div>
+<br>
 
 编译器这样做的目的有两个：  
 
