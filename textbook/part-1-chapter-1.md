@@ -67,7 +67,7 @@
 根据布尔代数的运算规则，我们会发现：  
 
 <div align="center">
-  <img src="https://latex.codecogs.com/svg.image?\inline&space;\bg{red}S=x\oplus&space;y\oplus&space;z" /><br>
+  <img src="https://latex.codecogs.com/svg.image?\inline&space;\bg{red}S=x\bigoplus&space;y\bigoplus&space;z" /><br>
   <img src="https://latex.codecogs.com/svg.image?\inline&space;\bg{red}C=x\cdot&space;y&plus;(x\bigoplus&space;y)\cdot&space;z" /><br>
 </div>  
 <br>
