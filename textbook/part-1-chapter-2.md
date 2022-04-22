@@ -120,7 +120,7 @@ STDIO.fclose (my_file)
 
 <small>清单 2-1  判断目标系统的字节序（check_endian.c）</small>
 
-```
+```c
 #include <stdio.h>
 
 inline int is_big_endian (void)
@@ -153,7 +153,7 @@ int main (void)
 
 另外，我们希望在程序中可以根据目标系统的字节序自动完成额外的数据转换。这种转换通常就是互换字节中的值。为了完成这种转换，我们可以使用类似清单 2-1 中的程序来判断本机的字节序，然后根据要读取或者写入的目标字节序来完成相应的转换。但在实践当中，我们采用条件编译来完成这种字节序的判断：  
 
-```
+```c
 #define _LIL_ENDIAN  1234
 #define _BIG_ENDIAN  4321
 
@@ -172,7 +172,7 @@ int main (void)
 
 程序可通过编译器预先定义的宏来判断目标平台是大头系统还是小头系统，然后将 `_BYTEORDER` 定义为相应的宏。然后在程序中采用下面的方法来处理字节序：  
 
-```
+```c
 #if _BYTEORDER == _BIG_ENDIAN
     /* for the big-endian system */
 #else
@@ -182,7 +182,7 @@ int main (void)
 
 比如，我们为了从文件中读取一个由小头系统保存的 16 位二进制整数，我们可以用下面的 C 代码编写程序：  
 
-```
+```c
         unsigned short temp;
 
         /* read back the data. */
@@ -197,7 +197,7 @@ int main (void)
 上面的 `temp = ((temp << 8)|(temp >> 8));` 语句将 `temp` 的高八位和低八位互换然后重新组合成了新的整数。
 在使用 GNU C 函数库时，我们还可以在源程序中包含 `<endian.h>` 头文件，并通过该头文件中已经定义好的 `__BYTE_ORDER` 宏来帮助判断目标系统的字节序，比如：  
 
-```
+```c
 #include <stdio.h>
 #include <endian.h>
 
@@ -219,7 +219,7 @@ int main (void)
 
 <small>清单 2-2 将大头整数或者小头整数转换为本机字节序（conv_int.c)</small>
 
-```
+```c
 static inline unsigned short ReadLE16Mem (const unsigned char** data)
 {
     unsigned short h1, h2;
@@ -271,7 +271,7 @@ static inline unsigned int ReadBE32Mem (const unsigned char** data)
 
 对齐问题是许多接触 C 语言不多的开发人员常常忽略的问题。为了对对齐有个感性认识，我们首先看下面的代码：  
 
-```
+```c
 #include <stdio.h>
 
 void align_1 (void)
@@ -294,7 +294,7 @@ int main (void)
 
 在编译并运行这段代码之前，读者可以首先推断一下该程序的正确输出。然后，我们在 PC 上运行这个程序看看它的实际结果：  
 
-```
+```shell
 user$ gcc -o align align.c    
 user$ ./align 
 The size of my_struct is 8
@@ -316,7 +316,7 @@ The size of my_struct is 8
 
 依此类推，我们可以看到下面这个结构的大小也是 8：  
 
-```
+```c
         struct {
                 char c;
                 short s;
@@ -326,7 +326,7 @@ The size of my_struct is 8
 
 另外，编译器通常会提供某种方法，以便取消定义结构时的成员对齐。在 gcc 中，我们可以用 `__attribute__ ((packed))` 修饰词取消结构内部的成员对齐：  
 
-```
+```c
 struct __attribute__ ((packed)) {
                 int i;
                 short s;
@@ -336,7 +336,7 @@ struct __attribute__ ((packed)) {
 
 为了避免因为对齐给我们带来麻烦，有的情况下我们需要仔细编码以便确保程序的正确性。比如，下面的程序试图将内存中的一个 32 位整数值取出来：  
 
-```
+```c
 unsigned int read_uint_from_mem (const unsigned char* data)
 {
     unsigned int u;
@@ -347,7 +347,7 @@ unsigned int read_uint_from_mem (const unsigned char* data)
 
 这段程序看起来没有什么问题，我们甚至可以这样编码：  
 
-```
+```c
 unsigned int read_uint_from_mem (const unsigned char* data)
 {
     unsigned int *u;
