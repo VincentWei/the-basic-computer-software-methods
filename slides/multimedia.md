@@ -15,14 +15,20 @@
    - 图像（image）及图形（graphics）
    - 音频（audio）
    - 视频（video）
+
+	
 - 视觉输入输出设备
    - 字符终端（character terminal）
    - 图形终端（graphics terminal）
    - 摄像头（camera）
+
+	
 - 听觉输入/输出设备
    - 麦克风（microphone）
    - 扬声器（speaker）
    - 耳机（earphone）
+
+	
 - 其他输入/输出设备
    - 陀螺仪（gyroscope）
    - 振动器（vibrator）
