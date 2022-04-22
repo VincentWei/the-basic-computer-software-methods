@@ -126,15 +126,18 @@ Q = 0.21R − 0.52G + 0.31B
 <?xml version="1.0"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
 "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="467" height="462">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+        width="467" height="462">
     <!-- 红色矩形 -->
-    <rect x="80" y="60" width="250" height="250" rx="20" fill="red" stroke="black" stroke-width="2px" />
+    <rect x="80" y="60" width="250" height="250" rx="20"
+            fill="red" stroke="black" stroke-width="2px" />
     <!-- 蓝色矩形 -->
-    <rect x="140" y="120" width="250" height="250" rx="40" fill="blue" stroke="black" stroke-width="2px" fill-opacity="0.7" />
+    <rect x="140" y="120" width="250" height="250" rx="40"
+            fill="blue" stroke="black" stroke-width="2px" fill-opacity="0.7" />
 </svg>
 ```
 
 	
 
-![矢量图形](list-5-1.svg)
+![矢量图形](assets/list-5-1.svg)
 
