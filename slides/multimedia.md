@@ -152,7 +152,8 @@ Q = 0.21R − 0.52G + 0.31B
 ```svg
 <?xml version="1.0"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
-"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+    "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
         width="467" height="462">
     <!-- 红色矩形 -->
@@ -168,3 +169,72 @@ Q = 0.21R − 0.52G + 0.31B
 
 ![矢量图形](assets/chapter-5-4.svg)
 
+		
+## 10. 基于静止图像的动画
+
+- GIF89a
+   - 文件中包含多帧使用 GIF 编码定义的图像，轮换播出。
+   - 除了第一帧之外，其他帧可定义局部变化。
+- MJPEG
+   - 有多个同样分辨率的连续 JPEG 图像组成
+
+		
+## 11. 基于矢量图形的动画
+
+```svg
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+    "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="8cm" height="3cm" viewBox="0 0 800 300"
+        xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <desc>演示 animation 元素</desc>
+    <rect x="1" y="1" width="798" height="298"
+        fill="none" stroke="blue" stroke-width="2" />
+
+    <!-- 下面的代码描述了如何使用 animation 元素来定义一个动画。
+        这些 animation 元素分别改变矩形的 x、y、width、height 四个属性，
+        最终使之充满整个视口 -->
+    <rect id="RectElement" x="300" y="100" width="300" height="100"
+            fill="rgb(255,255,0)" >
+        <animate attributeName="x" attributeType="XML"
+                begin="0s" dur="9s" fill="freeze" from="300" to="0" />
+        <animate attributeName="y" attributeType="XML"
+                begin="0s" dur="9s" fill="freeze" from="100" to="0" />
+        <animate attributeName="width" attributeType="XML"
+                begin="0s" dur="9s" fill="freeze" from="300" to="800" />
+        <animate attributeName="height" attributeType="XML"
+                begin="0s" dur="9s" fill="freeze" from="100" to="300" />
+    </rect>
+
+    <!-- 设立一个新的用户坐标系统，使得文本字符串的原点位于(0,0)，
+        从而相当于新的原点旋转和放大字符串文本。-->
+    <g transform="translate(100,100)" >
+        <!-- 下面的代码演示了 set、animateMotion、
+            animate 和 animateTransform 元素。text 元素最初
+            是隐藏的（也就是不可见）。在第三秒时：
+                * 变为可见
+                * 沿视口的对角线连续移动
+                * 其颜色从蓝色向深红色变化
+                * 从 -30 度向零度（水平）旋转
+                * 将字号放大三倍。-->
+        <text id="TextElement" x="0" y="0"
+                font-family="Verdana" font-size="35.27" visibility="hidden" >
+                It's alive!
+            <set attributeName="visibility" attributeType="CSS" to="visible"
+                    begin="3s" dur="6s" fill="freeze" />
+            <animateMotion path="M 0 0 L 100 100"
+                    begin="3s" dur="6s" fill="freeze" />
+            <animate attributeName="fill" attributeType="CSS"
+                    from="rgb(0,0,255)" to="rgb(128,0,0)"
+                    begin="3s" dur="6s" fill="freeze" />
+            <animateTransform attributeName="transform" attributeType="XML"
+                    type="rotate" from="-30" to="0"
+                    begin="3s" dur="6s" fill="freeze" />
+            <animateTransform attributeName="transform" attributeType="XML"
+                    type="scale" from="1" to="3" additive="sum"
+                    begin="3s" dur="6s" fill="freeze" />
+        </text>
+    </g>
+</svg>
+```
