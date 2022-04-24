@@ -3,7 +3,7 @@ markdownSlides:
   stage: deploy
   script:
     - echo "copy images..."
-    - cp slides/*.png slides/*.jpg /var/www/courses.fmsoft.cn/the-basic-computer-software-methods/assets -f
+    - cp slides/*.png slides/*.jpg slides/*.svg /var/www/courses.fmsoft.cn/the-basic-computer-software-methods/assets -f
     - echo "copy HTML files..."
     - cp slides/*.html /var/www/courses.fmsoft.cn/the-basic-computer-software-methods/ -f
     - echo "copy markdown files..."
