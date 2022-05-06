@@ -40,6 +40,11 @@
    - [在线讲义](https://courses.fmsoft.cn/the-basic-computer-software-methods/multimedia.html) 
    - 相关教材：[多媒体：图像、图形及音视频](textbook/part-1-chapter-5.md)  
 
+- 第八讲于 2022 年 5 月 6 日发表。
+   - [B 站视频](https://www.bilibili.com/video/BV1TT4y167S6/)
+   - [在线讲义](https://courses.fmsoft.cn/the-basic-computer-software-methods/multimedia.html#/7) 
+   - 相关教材：[多媒体：图像、图形及音视频](textbook/part-1-chapter-5.md)  
+
 
 ## 版权声明
 
